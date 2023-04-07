@@ -18,20 +18,20 @@ Mortgage loans are the input dataset for this challenge.  For the purposes of th
 we have supplied you with a set of about 1.5 million loan records.  There are twelve attributes per
 loan:
 
-| Attribute       |Type    | Description                                   
+| Attribute       | Type   | Description                                   
 |-----------------|--------|-----------------------------------------------|
-| loan_id         |string  | The loan's unique identifier                  |
-| upb             |int     | The loan's unpaid principal balance           |
-| note_rate       |float   | The loan's note rate, AKA its interest rate   
-| borrower_fico   |int     | The primary borrower's credit (FICO) score
-| coborrower_fico |int     | The coborrower's credit (FICO) score -- only present if more than one borrower
-| combined_fico   |int     | **derived field** if both borrower_fico and coborrower_fico are present, then you should calculate this attribute is the average of those two values, else it is _null_
-| state           |string  | The two-letter state code where the property is located
-| dti             |int     | debt-to-income ratio of the borrower
-| ltv             |int     | loan-to-value ratio -- ratio of the amount of the loan to the price of the home
-| maturity_date   |string  | (form is mmyyyy) the month and year in which the loan matures, AKA, when the balance is scheduled to reach zero
-| loan_term       |int     | The duration of the loan, expressed as months
-| property_type   |string  | Two-letter code indicating the type of dwelling (SF for single family, CO for condo, etc.)
+| loan_id         | string | The loan's unique identifier                  |
+| upb             | float  | The loan's unpaid principal balance           |
+| note_rate       | float  | The loan's note rate, AKA its interest rate   
+| borrower_fico   | int    | The primary borrower's credit (FICO) score
+| coborrower_fico | int    | The coborrower's credit (FICO) score -- only present if more than one borrower
+| combined_fico   | int    | If both borrower_fico and coborrower_fico are non-null then this is the average of those two values, else it is equal to borrower_fico
+| state           | string | The two-letter state code where the property is located
+| dti             | int    | debt-to-income ratio of the borrower
+| ltv             | int    | loan-to-value ratio -- ratio of the amount of the loan to the price of the home
+| maturity_date   | string | (form is mmyyyy) the month and year in which the loan matures, AKA, when the balance is scheduled to reach zero
+| loan_term       | int    | The duration of the loan, expressed as months
+| property_type   | string | Two-letter code indicating the type of dwelling (SF for single family, CO for condo, etc.)
 
 ## Pools
 

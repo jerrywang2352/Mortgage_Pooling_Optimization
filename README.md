@@ -33,6 +33,12 @@ loan:
 | loan_term       | int    | The duration of the loan, expressed as months
 | property_type   | string | Two-letter code indicating the type of dwelling (SF for single family, CO for condo, etc.)
 
+### Input Files
+The input dataset is comprised of 16 files in the GitHub repo, fnma-dataset-00.txt 
+throught fnma-dataset-15.txt.  You should clone the repo and then concatenate the files
+to create a single input file.  The fnma-dataset-00.txt file has a header row,
+so make sure that is the file that is at the top of the concatenated file.
+
 ## Pools
 
 Your challenge is to build as many _pools_ of loans as you can from the 
@@ -47,7 +53,7 @@ apply to all pool classes, and there are _specific_ constraints for each class.
 - Maturity Date -- all loans within a pool must have the same maturity_date
 - Loan Term -- all loans within a pool must have the same loan_term
 - FICO -- if combined_fico is not null, then it must be used for all calculations involving FICO scores
-- Property Type -- all loans within a pool must have the same property_type
+- Property Type -- **optional bonus constraint** -- for each pool that restricts its loans to all have the same property_type value, for example if they are all loans for condos ('CO'), then you will receive bonus points for adhering to this optional constraint.
 - **Most Important Of All** -- A loan can be in at most **one** pool
 ### Pool Classes and Constraints
 There are ten pool classes.  Each class has a set of constraints that determine which
@@ -109,3 +115,9 @@ all of the loan's input attributes/columns, delimited by pipes.
 # Utilize Our Mentors
 We have a group of mentors who are competent programmers and are knowledgeable in the 
 mortgage subject domain.  Do not hesitate to reach out to us at our table or via Slack.
+
+
+
+
+
+ 
